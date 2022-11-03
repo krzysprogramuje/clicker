@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            numofclick = 0
+            function kliknięto(){
+                alert("are u shure?")
+            }
+            function najechano(){
+                document.getElementById("kw1").style="width: 290px; background-color:lightcoral;"
+            }
+            function zjechano(){
+                document.getElementById("kw1").style="width: 200px;"
+            }
+            function clicker(){
+                numofclick= numofclick + 1
+                document.getElementById("kw2").innerHTML=("<h1>"+numofclick+"</h1>")
+                document.getElementById("kw2").style="height: 90px; width: 90px; margin-top: 55px; margin-left: 55px"
+                
+            }
+        </script>
+        <style>
+            #kw2{
+                background-color: chocolate;
+                width: 100px;
+                height: 100px;
+                margin-top: 50px;
+                margin-left: 50px;
+                transition: 0,2s ;
+            }
+            #kw1{
+                background-color: aquamarine;
+                height: 200px;
+                width: 200px;
+                transition: 1s;
+            }
+            
+            #kw1:hover{
+                width: 200px;
+                height: 200px;
+                margin-top: 0px;
+                
+                
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="kw1" onclick="kliknięto()" onmouseover="najechano()" onmouseout="zjechano()"></div>
+        <div id="kw2" onclick="clicker()" ></div>
+
+        
+    </body>
+
+
+</html>
